@@ -1,0 +1,27 @@
+# -*- Makefile -*-
+
+# If you use this as template for a real camlib (say 'foobar.la'),
+# make sure to change the "noinst_" at the beginning of the following
+# lines:
+#   * "noinst_DATA" into "camlibdoc_DATA"
+#   * "noinst_LTLIBRARIES" into "EXTRA_LTLIBRARIES"
+#
+# Additionally, you must add an include line to the Makefile-files
+# of the new camlib to camlibs/Makefile.am:
+#   * "include my-new-camlib/Makefile-files"
+#
+# And as the last step, you need to add it to configure.ac:
+#   * GP_CAMLIB([foobar])dnl
+
+EXTRA_DIST += sonyremote/ChangeLog
+
+EXTRA_DIST  += sonyremote/README.sonyremote
+camlibdoc_DATA += sonyremote/README.sonyremote
+
+EXTRA_LTLIBRARIES += sonyremote.la
+
+sonyremote_la_SOURCES = sonyremote/sonyremote.c
+sonyremote_la_CFLAGS = $(AM_CFLAGS) $(NO_UNUSED_CFLAGS) $(CFLAGS) $(LIBCURL_CFLAGS)
+sonyremote_la_LDFLAGS = $(camlib_ldflags)
+sonyremote_la_DEPENDENCIES = $(camlib_dependencies)
+sonyremote_la_LIBADD = $(camlib_libadd) $(LIBCURL_LIBS)

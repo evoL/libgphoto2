@@ -133,6 +133,7 @@ include smal/Makefile-files
 include sonix/Makefile-files
 include sonydscf1/Makefile-files
 include sonydscf55/Makefile-files
+include sonyremote/Makefile-files
 include soundvision/Makefile-files
 include spca50x/Makefile-files
 include sq905/Makefile-files

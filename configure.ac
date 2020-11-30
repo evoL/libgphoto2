@@ -599,6 +599,9 @@ GP_CAMLIB([smal],[outdated])dnl
 GP_CAMLIB([sonix])dnl
 GP_CAMLIB([sony_dscf1],[outdated])dnl
 GP_CAMLIB([sony_dscf55],[outdated])dnl
+AM_COND_IF([HAVE_LIBCURL], [dnl
+GP_CAMLIB([sonyremote])dnl
+])
 GP_CAMLIB([soundvision],[outdated])dnl
 GP_CAMLIB([spca50x],[outdated])dnl
 GP_CAMLIB([sq905])dnl
