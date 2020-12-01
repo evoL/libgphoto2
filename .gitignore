@@ -40,13 +40,17 @@
 # auto generated files
 *.pc
 .dirstamp
+.idea/
 ABOUT-NLS
 aclocal.m4
 auto-aux/
 auto-m4/
 autom4te.cache/
+camlibs/all-cfg-camlibs
 camlibs/all-def-camlibs
+camlibs/all-mkf-camlibs
 camlibs/all-src-camlibs
+compile_commands.json
 config.h
 config.h.in
 config.log
@@ -119,6 +123,7 @@ po/stamp-po
 README
 stamp-h1
 tests/ddb/check-ddb.sh
+tests/print-libgphoto2-version
 tests/test-filesys
 tests/test-gphoto2
 +.vscode/
